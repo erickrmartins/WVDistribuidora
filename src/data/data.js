@@ -29,51 +29,103 @@ export const data = {
         // variacoes: opcional. tipo é livre; obrigatorio é opcional (padrão: false)
         itens: [
             {
-                id: 1, categoria: "maq", nome: "Furadeira de impacto 650W",
-                descricao: "Mandril de 13 mm, com maleta e jogo de brocas.",
-                preco: "289,00", imagem: "furadeira-impacto.jpg",
-                variacoes: [{ tipo: "Voltagem", opcoes: ["110V", "220V"], obrigatorio: true }]
+                id: 1, categoria: "maq", nome: "Kit Martelete com Furadeira",
+                descricao: "Mandril de 13 mm, acompanha maleta de transporte e jogo de brocas.",
+                preco: "510,00", imagem: "martelete-furadeira.jpg"
             },
             {
-                id: 2, categoria: "maq", nome: "Esmerilhadeira 4 1/2\"",
-                descricao: "850W, para corte e desbaste de metal.",
-                preco: "219,00", imagem: "esmerilhadeira.jpg",
-                variacoes: [{ tipo: "Voltagem", opcoes: ["110V", "220V"] }]
+                id: 2, categoria: "maq", nome: "Kit Furadeira + Impacto",
+                descricao: "Potência de 850W, ideal para perfurações de alto desempenho e aperto de parafusos.",
+                preco: "490,00", imagem: "furadeira-impacto.jpg"
             },
             {
-                id: 3, categoria: "maq", nome: "Serra circular 7 1/4\"",
-                descricao: "1.500W, guia paralela e disco incluso.",
-                preco: "399,00", imagem: "serra-circular.jpg"
+                id: 3, categoria: "maq", nome: "Kit Lixadeira + Impacto",
+                descricao: "Potência de 1.500W, acompanha guia paralela e disco para corte e desbaste.",
+                preco: "500,00", imagem: "lixadeira-impacto.jpg"
             },
             {
-                id: 4, categoria: "pan", nome: "Jogo de panelas inox 5 peças",
-                descricao: "Fundo triplo, serve em fogão e indução.",
-                preco: "329,00", imagem: "jogo-panelas-inox.jpg"
+                id: 4, categoria: "maq", nome: "Impacto Pequena",
+                descricao: "Chave de impacto compacta para aperto e desaperto em locais de difícil acesso.",
+                preco: "340,00", imagem: "impacto-pequena.jpg"
             },
             {
-                id: 5, categoria: "pan", nome: "Panela de pressão 7 L",
-                descricao: "Alumínio reforçado, três válvulas de segurança.",
-                preco: "149,00", imagem: "panela-pressao.jpg",
-                variacoes: [{ tipo: "Cor", opcoes: ["Prata", "Vermelha"] }]
+                id: 5, categoria: "maq", nome: "Catraca",
+                descricao: "Chave catraca reforçada de alta durabilidade para trabalhos mecânicos.",
+                preco: "340,00", imagem: "catraca.jpg"
             },
             {
-                id: 6, categoria: "faq", nome: "Faqueiro inox 42 peças",
-                descricao: "Garfos, facas, colheres e talheres de sobremesa.",
-                preco: "119,00", imagem: "faqueiro-42.jpg"
+                id: 6, categoria: "maq", nome: "Motosserra",
+                descricao: "Motosserra potente para poda, corte de lenha e manejo florestal.",
+                preco: "430,00", imagem: "motosserra.jpg"
             },
             {
-                id: 7, categoria: "faq", nome: "Faqueiro inox 24 peças",
-                descricao: "Conjunto para seis pessoas, com estojo.",
-                preco: "79,00", imagem: "faqueiro-24.jpg"
+                id: 7, categoria: "maq", nome: "Roçadeira",
+                descricao: "Equipamento para corte de grama e roçagem de terrenos com motor potente.",
+                preco: "430,00", imagem: "rocadeira.jpg"
             },
             {
-                id: 8, categoria: "out", nome: "Caixa de ferramentas",
-                descricao: "Plástico reforçado, com bandeja removível.",
-                preco: "69,00", imagem: "caixa-ferramentas.jpg",
+                id: 8, categoria: "maq", nome: "Impacto Comum",
+                descricao: "Chave de impacto padrão para manutenção geral e uso profissional.",
+                preco: "300,00", imagem: "impacto-comum.jpg"
+            },
+            {
+                id: 9, categoria: "maq", nome: "Impacto Pequena Makita",
+                descricao: "Chave de impacto compacta da marca Makita, ergonômica e de alto rendimento.",
+                preco: "340,00", imagem: "impacto-pequena-makita.jpg"
+            },
+            {
+                id: 10, categoria: "maq", nome: "Impacto com Adaptador",
+                descricao: "Chave de impacto acompanhada de adaptador para múltiplos encaixes de soquetes.",
+                preco: "460,00", imagem: "impacto-adaptador.jpg"
+            },
+            {
+                id: 11, categoria: "maq", nome: "Impacto 3/4",
+                descricao: "Chave de impacto pesada com encaixe de 3/4 polegadas para serviços pesados.",
+                preco: "560,00", imagem: "impacto-34.jpg"
+            },
+            {
+                id: 12, categoria: "pan", nome: "Jogo de Panelas Donna 22 Peças",
+                descricao: "Conjunto completo com revestimento antiaderente, fundo triplo e compatível com diversos fogões.",
+                preco: "510,00", imagem: "donna-22.jpg",
                 variacoes: [
-                    { tipo: "Tamanho", opcoes: ["16\"", "19\"", "22\""] },
-                    { tipo: "Cor", opcoes: ["Preta", "Amarela"] }
+                    { tipo: "Cor", opcoes: ["Preta", "Marrom", "Verde"] }
                 ]
+            },
+            {
+                id: 13, categoria: "pan", nome: "Jogo de Panelas Monaco 21 Peças",
+                descricao: "Jogo de panelas em alumínio reforçado, com tampas de vidro temperado e saídas de vapor.",
+                preco: "430,00", imagem: "monaco-21.jpg",
+                variacoes: [
+                    { tipo: "Cor", opcoes: ["Preto", "Marrom", "Dourado"] }
+                ]
+            },
+            {
+                id: 14, categoria: "pan", nome: "Jogo de Panelas Monaco 20 Peças",
+                descricao: "Conjunto de panelas versátil para o dia a dia, com excelente distribuição de calor.",
+                preco: "430,00", imagem: "monaco-20.jpg",
+                variacoes: [
+                    { tipo: "Cor", opcoes: ["Marrom", "Rose", "Kinder", "Branco", "Preto"] }
+                ]
+            },
+            {
+                id: 15, categoria: "faq", nome: "Faqueiro Monaco 12 Peças",
+                descricao: "Jogo de facas em aço inox de alta precisão com cabo ergonômico.",
+                preco: "45,00", imagem: "faqueiro-monaco-12.jpg"
+            },
+            {
+                id: 16, categoria: "faq", nome: "Faqueiro Monaco 17 Peças",
+                descricao: "Faqueiro completo de aço inoxidável com suporte/cepo para bancada.",
+                preco: "55,00", imagem: "faqueiro-monaco-17.jpg"
+            },
+            {
+                id: 17, categoria: "tal", nome: "Jogo de Talheres Monaco 48 Peças",
+                descricao: "Garfos, facas, colheres e talheres de sobremesa em aço inox para até 8 pessoas.",
+                preco: "260,00", imagem: "talheres-monaco-48.jpg"
+            },
+            {
+                id: 18, categoria: "tal", nome: "Jogo de Talheres Monaco 84 Peças",
+                descricao: "Jogo de talheres completo com estojo de luxo e peças de servir para ocasiões especiais.",
+                preco: "360,00", imagem: "talheres-monaco-84.jpg"
             }
         ]
     },
@@ -88,7 +140,7 @@ export const data = {
         titulo: "Contatos",
         subtitulo: "Fale com a gente ou passe no galpão.",
         pedidos: { label: "Pedidos", botao: "WhatsApp" },
-        endereco: { label: "Localização", texto: "Rua Exemplo, 000, Bairro, Cidade/UF", url: "#" },
+        endereco: { label: "Localização", texto: "Rua Paulo Augusto Tucci, 64, Jardim Izolina, Ibitinga, SP - 14943440", url: "https://maps.app.goo.gl/WUcksipYshoBhqfy5" },
         redes: {
             label: "Redes sociais",
             itens: [
@@ -99,9 +151,8 @@ export const data = {
         horario: {
             label: "Funcionamento",
             itens: [
-                { id: 1, dia: "SEG-SEX:", horas: "08:00 - 18:00" },
-                { id: 2, dia: "SÁBADO:", horas: "08:00 - 13:00" },
-                { id: 3, dia: "DOMINGO:", horas: "FECHADO" }
+                { id: 1, dia: "SEG-SEX:", horas: "09:00 - 18:00" },
+                { id: 2, dia: "SAB-DOM:", horas: "Sob Consulta" }
             ]
         }
     }
