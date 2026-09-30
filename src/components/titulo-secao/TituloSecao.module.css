@@ -1,0 +1,7 @@
+.titulo {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 28px;
+}
+
+.titulo h2 { margin-top: 6px; }

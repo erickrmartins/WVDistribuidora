@@ -1,0 +1,14 @@
+.beneficios { padding-top: 30px; padding-bottom: 30px; }
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.item { padding: 18px; border-radius: 16px; text-align: center; }
+
+.item h3 { font: 600 26px var(--font-titulo); color: var(--color-card-text-main); }
+.item span { font-size: 13px; }

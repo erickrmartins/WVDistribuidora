@@ -1,0 +1,77 @@
+.fundo {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cartao {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    padding: 24px;
+    background: var(--color-card-bg);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.fechar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    border: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-main-bg);
+    color: var(--color-card-text-sec);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.foto { aspect-ratio: 1; align-self: start; }
+
+.info { min-width: 0; display: flex; flex-direction: column; gap: 12px; justify-content: center; padding-top: 24px; }
+
+.categoria { font-size: 13px; font-weight: 600; color: var(--color-card-text-main); }
+.titulo { font: 600 38px/1.05 var(--font-titulo); color: var(--color-card-text-main); }
+.preco { font-size: 28px; font-weight: 600; }
+
+.grupo { display: flex; flex-direction: column; gap: 6px; }
+.rotulo { font-size: 13px; font-weight: 600; }
+.opcoes { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.opcao {
+    border: 0;
+    border-radius: 50px;
+    padding: 8px 14px;
+    min-height: 40px;
+    background: var(--color-main-bg);
+    color: var(--color-card-text-sec);
+    font: 500 14px var(--font-texto);
+    box-shadow: inset 0 0 0 1px var(--color-border);
+    cursor: pointer;
+}
+
+.opcao[aria-pressed="true"] {
+    background: var(--color-card-text-main);
+    color: var(--color-card-bg);
+    box-shadow: none;
+}
+
+.aviso { font-size: 13px; font-weight: 600; color: var(--color-card-text-main); }
+
+@media (max-width: 768px) {
+    .cartao { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 16px; }
+    .foto { aspect-ratio: 16 / 10; }
+    .titulo { font-size: 32px; }
+}

@@ -1,0 +1,86 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 64px;
+    padding: 8px 30px;
+    background: var(--color-main-bg);
+}
+
+.logo { display: flex; align-items: center; height: 100%; flex: none; }
+.logo img { height: 100%; width: auto; display: block; }
+.logoTexto { font: 700 30px var(--font-titulo); color: var(--color-card-text-main); }
+
+.nav { flex: 1; }
+.nav ul { display: flex; justify-content: center; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.nav a { display: block; padding: 5px 22px; border-bottom: 2px solid transparent; transition: 0.3s; }
+.nav a:hover { color: var(--color-card-text-main); border-color: var(--color-card-text-main); }
+
+.acoes { display: flex; align-items: center; gap: 10px; }
+
+.carrinho, .menu {
+    position: relative;
+    flex: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carrinho { background: var(--color-button-bg); color: var(--color-button-text); }
+.carrinho:hover { filter: brightness(0.88); }
+
+.menu { display: none; background: transparent; color: var(--color-card-text-main); }
+
+.carrinho svg, .menu svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.carrinho span {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 10px;
+    background: var(--color-card-text-main);
+    color: var(--color-card-bg);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header { padding: 8px 16px; }
+    .menu { display: grid; }
+    .nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        padding: 8px 0;
+        background: var(--color-card-bg);
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: var(--shadow);
+    }
+    .nav.on { display: block; }
+    .nav ul { flex-direction: column; gap: 0; }
+    .nav a { padding: 14px 24px; border: 0; }
+}

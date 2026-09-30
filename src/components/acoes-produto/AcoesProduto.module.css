@@ -1,0 +1,11 @@
+.raiz {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.cheio > * { flex: 1; }
+
+@media (max-width: 768px) {
+    .raiz > * { flex: 1; }
+}

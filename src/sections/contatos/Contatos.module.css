@@ -1,0 +1,26 @@
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+}
+
+.caixa label { color: var(--color-card-text-main); font-size: 20px; margin-bottom: 6px; }
+
+.caixa a { padding: 6px 14px; border-radius: 50px; transition: 0.2s; }
+.caixa a:hover { background: var(--color-tint); }
+
+.horario { display: flex; justify-content: space-between; width: 100%; gap: 10px; }

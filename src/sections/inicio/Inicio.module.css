@@ -1,0 +1,22 @@
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    min-height: 60vh;
+    text-align: center;
+    background: var(--color-card-bg);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
+}
+
+.inicio h1 { font-size: 64px; line-height: 1.05; max-width: 820px; }
+.inicio h2 { max-width: 620px; }
+
+.botoes { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+    .inicio h1 { font-size: 44px; }
+}

@@ -1,0 +1,16 @@
+.catalogo {
+    background: var(--color-card-bg);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
+}
+
+.lista { display: flex; flex-direction: column; max-width: 860px; margin: 0 auto; }
+
+.grupo { display: flex; flex-direction: column; gap: 10px; }
+
+.grupo h3 {
+    font: 600 32px var(--font-titulo);
+    color: var(--color-card-text-main);
+    margin: 18px 0 4px;
+}

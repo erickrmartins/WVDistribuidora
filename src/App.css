@@ -1,0 +1,77 @@
+:root {
+  --color-main-bg: #F1F3F2;
+  --color-card-bg: #ffffff;
+  --color-border: rgba(31, 42, 51, 0.10);
+  --color-card-text-main: #1F4E6B;
+  --color-card-text-sec: #3B4650;
+  --color-button-bg: #F2A900;
+  --color-button-text: #1F2A33;
+  --color-tint: #E1EAEF;
+  --shadow: 0 4px 20px -2px rgba(31, 42, 51, 0.08);
+  --font-titulo: "Barlow Condensed", Impact, sans-serif;
+  --font-texto: "Barlow", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-main-bg: #141A1F;
+    --color-card-bg: #1E272E;
+    --color-border: rgba(255, 255, 255, 0.09);
+    --color-card-text-main: #8FBEDD;
+    --color-card-text-sec: #CBD5DC;
+    --color-tint: #2A3742;
+    --shadow: none;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-main-bg);
+  color: var(--color-card-text-sec);
+  font: 400 17px/1.5 var(--font-texto);
+}
+
+h1, h2, h3, p { margin: 0; }
+
+h1 {
+  font: 600 48px/1.1 var(--font-titulo);
+  color: var(--color-card-text-main);
+}
+
+h2 { font-size: 18px; font-weight: 400; }
+
+a { color: inherit; text-decoration: none; }
+
+button { font-family: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--color-card-text-main);
+  outline-offset: 2px;
+}
+
+section { padding: 40px 50px; }
+
+[hidden] { display: none !important; }
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 14px; }
+  section { padding: 30px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
