@@ -3,7 +3,7 @@ import styles from './ProdutoModal.module.css'
 import Botao from '../botao/Botao.jsx'
 import FotoProduto from '../foto-produto/FotoProduto.jsx'
 import AcoesProduto from '../acoes-produto/AcoesProduto.jsx'
-import { faltando, variacoesDe } from '../../utils/carrinho.js'
+import { faltando, variacoesDe, imagemDaSelecao } from '../../utils/carrinho.js'
 
 function ProdutoModal({ item, categoria, onFechar, onAbrirCarrinho }) {
     const variacoes = variacoesDe(item)
@@ -31,6 +31,7 @@ function ProdutoModal({ item, categoria, onFechar, onAbrirCarrinho }) {
         setSelecao((s) => s.map((atual, k) => (k === j ? (atual === x ? null : x) : atual)))
 
     const falta = faltando(item, selecao)
+    const imagemSelecionada = imagemDaSelecao(item, selecao)
 
     return (
         <div
@@ -43,13 +44,15 @@ function ProdutoModal({ item, categoria, onFechar, onAbrirCarrinho }) {
             <div className={styles.cartao}>
                 <button ref={fechar} type="button" className={styles.fechar} onClick={onFechar} aria-label="Fechar">×</button>
                 <div className={styles.foto}>
-                    <FotoProduto item={item} />
+                    <FotoProduto item={item} imagem={imagemSelecionada} />
+                    {item.esgotado && <span className={styles.seloEsgotado}>Esgotado</span>}
                 </div>
                 <div className={styles.info}>
                     {categoria && <span className={styles.categoria}>{categoria.nome}</span>}
                     <h2 id="produto-titulo" className={styles.titulo}>{item.nome}</h2>
                     <p>{item.descricao}</p>
                     {item.preco && <p className={styles.preco}>R$ {item.preco}</p>}
+                    {item.esgotado && <p className={styles.avisoEsgotado}>Este produto está temporariamente esgotado.</p>}
 
                     {variacoes.map((v, j) => (
                         <div key={v.tipo} className={styles.grupo} role="group" aria-label={v.tipo}>

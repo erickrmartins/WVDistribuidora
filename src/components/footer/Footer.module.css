@@ -1,7 +1,10 @@
 .footer {
     display: flex;
     justify-content: center;
-    padding: 30px 20px;
-    font-size: 13px;
+    padding: 34px 20px 40px;
+    color: #7b858b;
+    font-size: 12px;
     text-align: center;
+    background: var(--color-card-bg);
+    border-top: 1px solid var(--color-border);
 }

@@ -21,7 +21,18 @@ function AcoesProduto({ item, selecao = [], modal = false, cheio = false, onAbri
     })
 
     const temVariacoes = variacoesDe(item).length > 0
+    const esgotado = item.esgotado === true
     const classes = `${styles.raiz} ${cheio ? styles.cheio : ''}`
+
+    if (esgotado) {
+        return (
+            <div className={classes}>
+                <Botao tamanho={modal ? 'md' : 'sm'} disabled>
+                    Esgotado
+                </Botao>
+            </div>
+        )
+    }
 
     if (!modal && temVariacoes) {
         const n = carrinho.qtdDoItem(item.id)

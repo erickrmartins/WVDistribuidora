@@ -5,73 +5,70 @@
     display: grid;
     place-items: center;
     padding: 16px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(15,25,31,.48);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
 }
 
 .cartao {
     position: relative;
     width: 100%;
-    max-width: 780px;
+    max-width: 820px;
     max-height: calc(100vh - 32px);
     overflow: auto;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 24px;
-    padding: 24px;
-    background: var(--color-card-bg);
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    gap: 30px;
+    padding: 22px;
+    background: rgba(255,255,255,.98);
+    border: 1px solid rgba(31,42,51,.08);
+    border-radius: 26px;
+    box-shadow: 0 30px 100px rgba(15,25,31,.24);
 }
 
-.fechar {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 1;
-    border: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--color-main-bg);
-    color: var(--color-card-text-sec);
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.foto { aspect-ratio: 1; align-self: start; }
-
-.info { min-width: 0; display: flex; flex-direction: column; gap: 12px; justify-content: center; padding-top: 24px; }
-
-.categoria { font-size: 13px; font-weight: 600; color: var(--color-card-text-main); }
-.titulo { font: 600 38px/1.05 var(--font-titulo); color: var(--color-card-text-main); }
-.preco { font-size: 28px; font-weight: 600; }
-
-.grupo { display: flex; flex-direction: column; gap: 6px; }
-.rotulo { font-size: 13px; font-weight: 600; }
-.opcoes { display: flex; flex-wrap: wrap; gap: 8px; }
-
-.opcao {
-    border: 0;
-    border-radius: 50px;
-    padding: 8px 14px;
-    min-height: 40px;
-    background: var(--color-main-bg);
-    color: var(--color-card-text-sec);
-    font: 500 14px var(--font-texto);
-    box-shadow: inset 0 0 0 1px var(--color-border);
-    cursor: pointer;
-}
-
-.opcao[aria-pressed="true"] {
-    background: var(--color-card-text-main);
-    color: var(--color-card-bg);
-    box-shadow: none;
-}
-
-.aviso { font-size: 13px; font-weight: 600; color: var(--color-card-text-main); }
+.fechar { position: absolute; top: 13px; right: 13px; z-index: 1; border: 0; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.9); color: var(--color-card-text-sec); font-size: 20px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,.08); }
+.foto { position: relative; aspect-ratio: 1; align-self: start; }
+.info { min-width: 0; display: flex; flex-direction: column; gap: 13px; justify-content: center; padding: 18px 8px 8px 0; }
+.categoria { display: inline-flex; align-self: flex-start; padding: 5px 9px; border-radius: 7px; background: var(--color-tint); color: var(--color-card-text-main); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+.titulo { font: 600 40px/.96 var(--font-titulo); color: var(--color-card-text-main); }
+.preco { font-size: 26px; font-weight: 600; color: var(--color-dark); }
+.grupo { display: flex; flex-direction: column; gap: 7px; }
+.rotulo { font-size: 12px; font-weight: 600; color: #66727a; text-transform: uppercase; letter-spacing: .06em; }
+.opcoes { display: flex; flex-wrap: wrap; gap: 7px; }
+.opcao { border: 1px solid var(--color-border); border-radius: 10px; padding: 8px 13px; min-height: 39px; background: #f7f8f7; color: var(--color-card-text-sec); font: 500 13px var(--font-texto); cursor: pointer; transition: .2s; }
+.opcao:hover { border-color: rgba(22,74,104,.28); background: var(--color-tint); }
+.opcao[aria-pressed="true"] { background: var(--color-card-text-main); color: white; border-color: var(--color-card-text-main); }
+.aviso { font-size: 12px; font-weight: 600; color: #a66e00; }
 
 @media (max-width: 768px) {
-    .cartao { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 16px; }
+    .cartao { grid-template-columns: minmax(0,1fr); gap: 17px; padding: 14px; border-radius: 21px; }
     .foto { aspect-ratio: 16 / 10; }
-    .titulo { font-size: 32px; }
+    .info { padding: 5px 4px 8px; }
+    .titulo { font-size: 34px; }
+}
+
+
+.seloEsgotado {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(31,42,51,.9);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+}
+
+.avisoEsgotado {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #f1f3f2;
+    color: #66727a;
+    font-size: 12px;
+    font-weight: 600;
 }

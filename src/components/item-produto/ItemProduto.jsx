@@ -4,9 +4,10 @@ import AcoesProduto from '../acoes-produto/AcoesProduto.jsx'
 
 function ItemProduto({ item, onAbrir }) {
     return (
-        <article className={styles.linha} onClick={() => onAbrir(item.id)}>
+        <article className={`${styles.linha} ${item.esgotado ? styles.esgotado : ''}`} onClick={() => onAbrir(item.id)}>
             <div className={styles.foto}>
                 <FotoProduto item={item} />
+                {item.esgotado && <span className={styles.seloEsgotado}>Esgotado</span>}
             </div>
             <div className={styles.texto}>
                 <h3>

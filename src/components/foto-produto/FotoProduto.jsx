@@ -2,12 +2,14 @@ import styles from './FotoProduto.module.css'
 import Imagem from '../imagem/Imagem.jsx'
 import IconeCategoria from '../icone-categoria/IconeCategoria.jsx'
 
-// Preenche o espaço do elemento pai (o pai define o tamanho)
-function FotoProduto({ item }) {
+// imagem pode ser sobrescrita pela combinação de variações escolhida.
+function FotoProduto({ item, imagem = null }) {
+    const arquivo = imagem ?? item.imagem
+
     return (
         <div className={styles.foto}>
             <Imagem
-                src={item.imagem ? `produtos/${item.imagem}` : null}
+                src={arquivo ? `produtos/${arquivo}` : null}
                 alt={item.nome}
                 fallback={<IconeCategoria id={item.categoria} />}
             />

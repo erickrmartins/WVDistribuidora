@@ -1,26 +1,30 @@
 .grade {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 1060px;
     margin: 0 auto;
 }
 
 .caixa {
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px;
-    background: var(--color-card-bg);
+    padding: 24px 18px;
+    background: rgba(255,255,255,.72);
     border: 1px solid var(--color-border);
     border-radius: 20px;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
+.caixa:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(22,74,104,.16); }
+.caixa label { color: var(--color-card-text-main); font: 600 24px/1 var(--font-titulo); margin-bottom: 6px; }
+.caixa a { padding: 5px 10px; border-radius: 9px; transition: .2s; font-size: 14px; }
+.caixa a:hover { color: var(--color-card-text-main); background: var(--color-tint); }
+.horario { display: flex; justify-content: space-between; width: 100%; max-width: 170px; gap: 10px; font-size: 13px; }
 
-.caixa label { color: var(--color-card-text-main); font-size: 20px; margin-bottom: 6px; }
-
-.caixa a { padding: 6px 14px; border-radius: 50px; transition: 0.2s; }
-.caixa a:hover { background: var(--color-tint); }
-
-.horario { display: flex; justify-content: space-between; width: 100%; gap: 10px; }
+@media (max-width: 900px) { .grade { grid-template-columns: repeat(2, 1fr); max-width: 700px; } }
+@media (max-width: 520px) { .grade { grid-template-columns: 1fr; } .caixa { min-height: 150px; } }

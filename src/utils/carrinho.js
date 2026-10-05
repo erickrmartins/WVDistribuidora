@@ -25,3 +25,20 @@ export function lerLinha(chave, itens) {
     }
     return { item, rotulo: rotulos.join(', ') }
 }
+
+
+// Retorna a imagem específica da combinação escolhida, quando cadastrada no data.js.
+// Formato aceito: imagens: { "Preta": "donna-preta.png", "Verde": "donna-verde.png" }
+export const imagemDaSelecao = (item, selecao = []) => {
+    const vars = variacoesDe(item)
+    for (let j = selecao.length - 1; j >= 0; j--) {
+        const indice = selecao[j]
+        const v = vars[j]
+        if (indice == null || !v?.imagens) continue
+        const opcao = v.opcoes?.[indice]
+        if (opcao == null) continue
+        const imagem = Array.isArray(v.imagens) ? v.imagens[indice] : v.imagens[opcao]
+        if (imagem) return imagem
+    }
+    return item.imagem ?? null
+}

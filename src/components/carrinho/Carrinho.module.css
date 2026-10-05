@@ -2,90 +2,49 @@
     position: fixed;
     inset: 0;
     z-index: 40;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(15,25,31,.38);
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
+    transition: .25s ease;
+    backdrop-filter: blur(2px);
 }
-
 .fundo.on { opacity: 1; visibility: visible; }
 
 .painel {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
     z-index: 50;
-    width: min(420px, 100%);
+    width: min(430px, calc(100% - 24px));
     display: flex;
     flex-direction: column;
-    background: var(--color-card-bg);
-    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.2);
-    transform: translateX(100%);
+    background: rgba(255,255,255,.97);
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    box-shadow: 0 25px 80px rgba(15,25,31,.2);
+    transform: translateX(calc(100% + 24px));
     visibility: hidden;
-    transition: transform 0.3s, visibility 0.3s;
+    transition: transform .3s ease, visibility .3s ease;
+    overflow: hidden;
 }
-
 .painel.on { transform: none; visibility: visible; }
 
-.topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--color-border);
-}
+.topo { display: flex; justify-content: space-between; align-items: center; padding: 20px 22px; border-bottom: 1px solid var(--color-border); }
+.topo h2 { font: 600 32px/1 var(--font-titulo); color: var(--color-card-text-main); }
+.fechar { border: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--color-tint); color: var(--color-card-text-sec); font-size: 20px; cursor: pointer; }
+.lista { flex: 1; overflow-y: auto; padding: 14px 18px; display: flex; flex-direction: column; gap: 9px; }
+.vazio { text-align: center; padding: 55px 20px; color: #738087; }
 
-.topo h2 { font: 600 30px var(--font-titulo); color: var(--color-card-text-main); }
-
-.fechar {
-    border: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--color-main-bg);
-    color: var(--color-card-text-sec);
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.lista { flex: 1; overflow-y: auto; padding: 12px 20px; display: flex; flex-direction: column; gap: 10px; }
-.vazio { text-align: center; padding: 40px 10px; }
-
-.linha {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--color-main-bg);
-    border-radius: 14px;
-    padding: 10px 12px;
-}
-
+.linha { display: flex; align-items: center; gap: 10px; background: #f4f6f5; border: 1px solid rgba(31,42,51,.05); border-radius: 15px; padding: 11px 12px; }
 .texto { flex: 1; min-width: 0; }
-.texto h3 { font-size: 15px; font-weight: 600; }
-.texto p { font-size: 13px; }
-.variacao { color: var(--color-card-text-main); font-weight: 600; font-size: 12px !important; }
+.texto h3 { font-size: 14px; line-height: 1.25; color: var(--color-dark); }
+.texto p { font-size: 12px; color: #748087; }
+.variacao { color: var(--color-card-text-main) !important; font-weight: 600; font-size: 12px !important; }
+.remover { border: 0; width: 30px; height: 30px; border-radius: 50%; background: transparent; color: var(--color-card-text-sec); font-size: 18px; cursor: pointer; }
+.remover:hover { background: #e7ecee; }
 
-.remover {
-    border: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: transparent;
-    color: var(--color-card-text-sec);
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.rodape { padding: 16px 20px; border-top: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 10px; }
-.total { display: flex; justify-content: space-between; font-weight: 600; }
-.rodape small { font-size: 12px; text-align: center; }
-
-.limpar {
-    background: none;
-    border: 0;
-    color: var(--color-card-text-sec);
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 13px;
-}
+.rodape { padding: 17px 20px; border-top: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 10px; }
+.total { display: flex; justify-content: space-between; font-weight: 600; color: var(--color-dark); }
+.rodape small { font-size: 11px; text-align: center; color: #7a858b; }
+.limpar { background: none; border: 0; color: var(--color-card-text-sec); text-decoration: underline; cursor: pointer; font-size: 12px; }
