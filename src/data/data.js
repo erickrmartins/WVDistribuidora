@@ -39,7 +39,7 @@ export const data = {
             {
                 id: 2, categoria: "maq", nome: "Kit Furadeira + Impacto",
                 descricao: "Potência de 850W, ideal para perfurações de alto desempenho e aperto de parafusos.",
-                preco: "490,00", imagem: "furadeira-impacto.webp"
+                preco: "490,00", imagem: "furadeira-impacto.webp", esgotado: true
             },
             {
                 id: 3, categoria: "maq", nome: "Kit Lixadeira + Impacto",
@@ -49,7 +49,7 @@ export const data = {
             {
                 id: 4, categoria: "maq", nome: "Impacto Pequena",
                 descricao: "Chave de impacto compacta para aperto e desaperto em locais de difícil acesso.",
-                preco: "340,00", imagem: "impacto-pequena.png"
+                preco: "340,00", imagem: "impacto-pequena.jpe"
             },
             {
                 id: 5, categoria: "maq", nome: "Catraca",
@@ -64,17 +64,17 @@ export const data = {
             {
                 id: 7, categoria: "maq", nome: "Roçadeira",
                 descricao: "Equipamento para corte de grama e roçagem de terrenos com motor potente.",
-                preco: "430,00", imagem: "rocadeira.png"
+                preco: "430,00", imagem: "rocadeira.jpe"
             },
             {
                 id: 8, categoria: "maq", nome: "Impacto Comum",
                 descricao: "Chave de impacto padrão para manutenção geral e uso profissional.",
-                preco: "300,00", imagem: "impacto-comum.png"
+                preco: "300,00", imagem: "impacto-comum.jpe"
             },
             {
                 id: 9, categoria: "maq", nome: "Impacto Pequena Makita",
                 descricao: "Chave de impacto compacta da marca Makita, ergonômica e de alto rendimento.",
-                preco: "340,00", imagem: "impacto-pequena-makita.png"
+                preco: "340,00", imagem: "impacto-pequena-makita.jpe", esgotado: true
             },
             {
                 id: 10, categoria: "maq", nome: "Impacto 1/2",
